@@ -1,5 +1,5 @@
-read -p "Press 2 [Enter] key to add amend no-edit..."
-read -p "Press 1 [Enter] key to add amend no-edit..."
+# read -p "Press 2 [Enter] key to add amend no-edit..."
+# read -p "Press 1 [Enter] key to add amend no-edit..."
 
 echo ""
 echo "==================="
@@ -20,13 +20,15 @@ echo "==================="
 git log --oneline
 
 echo ""
-gbrowsevar=$(git config --get remote.origin.url)
-printf "${gbrowsevar}"
-start $gbrowsevar
+# gbrowsevar=$(git config --get remote.origin.url)
+# printf "${gbrowsevar}"
+# start $gbrowsevar
 echo ""
 
 echo ""
 git config --get remote.origin.url
+echo ""
+echo ""
 
 
-read -t 30 -p "Press [Enter] key to exit..."
+read -t 5 -p "Press [Enter] key to exit..."

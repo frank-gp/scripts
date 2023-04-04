@@ -1,16 +1,19 @@
 @echo off
 Title %~nx0
-set /p image=Import image file: 
+set /p video=Import video file: 
 set /p audio=Import audio file: 
-set /p videoOutput=Export video output name: 
 echo.
 
 @REM ========== script... ==========
-ffmpeg -loop 1 -framerate 1 -i %image% -i %audio% -shortest %videoOutput%.mp4
+ffmpeg -i %video% -i %audio% -map 0:v:0 -map 1:a:0 -c:v copy output-reemplace.mp4
+
 @REM ========== script. ==========
+
 echo.
 echo.
 echo %~nx0
 echo.
 echo.
 pause
+
+
